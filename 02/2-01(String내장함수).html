@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>String 내장 함수</title>
+</head>
+<body>
+    <script>
+        var txt = "ABCDEFGHIJKLMN";
+        console.log(txt.length);
+
+        // IndexOf : 첫 번째 만나는 단어의 위치값
+        var str = "Please locate where 'locate'";
+        console.log(str.indexOf("locate"));
+        // 없는 값이라면 -1 return
+        console.log(str.indexOf("choi"));
+        
+        if ( str.indexOf("locate") > -1 ) {
+            console.log("locate 문자 발견");
+        }
+        // lastIndexOf : 문자열의 끝부분부터 파악
+        console.log(str.lastIndexOf("locate"));
+
+
+        // search : locate단어가 시작되는 첫 번째 위치를 찾아줌
+        console.log(str.search("locate"));
+
+
+        // slice(인덱스, 인덱스-1) : 인덱스~인덱스-1까지 글자를 잘라서 보여줌
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.slice(7, 13)); // 출력값 : Banana
+        // 인덱스가 하나인 경우 : 인덱스~끝까지 글자를 잘라서 보여줌
+        console.log(str.slice(7));
+        // 인덱스가 -이면 -12~-6-1까지 글자를 잘라서 보여줌
+        // -1, -2, -3, -4 이런 순서
+        console.log(str.slice(-12,-6));// 출력값 : Banana
+
+
+        // substring
+        var str = "Apple, Banana, Kiwi";
+        console.log(str.substring(7,13)); // 출력값 : Banana
+        
+        // substr(n,m) : n번 글자부터 m글자
+        console.log(str.substr(7,6)); // 출력값 : Banana
+
+        var jumin1 = "070828";
+        console.log(jumin1.substr(0,2));// 연
+        console.log(jumin1.substr(2,2));// 월
+        console.log(jumin1.substr(4,2));// 일
+
+        var jumin2 = "2007-08-28";
+        console.log(jumin2.substring(0,jumin2.indexOf("-")));
+
+
+        // replace : 교체
+        var str1 = "Please vist here";
+        var str2 = str1.replace("here", "there");
+        console.log(str2);
+        
+        var str3 = "here here here";
+        var str4 = str3.replace("here", "there");
+        console.log(str4);
+        
+
+        // 정규 표현식
+        var str5 = "here here here";
+        var str6 = str5.replace(/here/g, "there"); // g(global) : 전체를 바꿔줌
+        console.log(str6);
+
+        var str7 = "HERE Here heRe";
+        var str8 = str7.replace(/here/ig, "there"); // i(ignore) : 대소문자 구분 안 함
+        console.log(str8);
+        
+        // toUpperCase : 모두 대문자로
+        var str9 = "HERE Here heRe";
+        console.log(str9.toUpperCase());
+
+        // toLowerCase : 모두 소문자로
+        var str10 = "Here heRe Here";
+        console.log(str10.toLowerCase());
+
+
+    </script>
+</body>
+</html>
