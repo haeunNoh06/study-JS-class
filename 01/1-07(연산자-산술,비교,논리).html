@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        // 더하기
+        var x1 = 5;
+        var y1 = 2;
+        var z1 = x1 + y1;
+        console.log(z1); // js는 로직처리가 가능함(클라이언트임에도 불구)
+
+        // 빼기
+        var x2 = 5;
+        var y2 = 2;
+        var z2 = x2 - y2;
+        console.log(z2);
+
+        // 곱하기
+        var x3 = 5;
+        var y3 = 2;
+        var z3 = x3 * y3;
+        console.log(z3);
+
+        // 나누기
+        var x4 = 5;
+        var y4 = 2;
+        var z4 = x4 / y4; // js는 var에 int, float 다 집어넣기 때문에 정수/정수라도 결과는 실수가 나옴
+        console.log(z4);
+        
+        // 거듭제곱
+        var x5 = 5;
+        var y5 = 2;
+        var z5 = x5 ** y5; // ** : 제곱(5의 2승)
+        console.log(z5);
+
+        // 나머지
+        var x6 = 5;
+        var y6 = 2;
+        var z6 = x6 % y6;
+        console.log(z6);
+        
+        // 증가연산자
+        var x7 = 1;
+        x7++;
+        console.log(x7);
+        
+        // 감소연산자
+        var x8 = 8;
+        x8--;
+        console.log(x8);
+
+        var x9 = 5;
+        var y9 = 2;
+
+        x9 += y9;
+        console.log(x9);// 값이 5 -> 7
+        console.log(y9);// 값이 2 그대로
+        
+        x9 -= y9;   // 7 - 2
+        console.log(x9); // 결과값 : 5
+        
+        x9 *= y9;
+        console.log(x9);
+        console.log(y9);
+        
+        x9 /= y9;
+        console.log(x9);
+        console.log(y9);
+
+        // 문자열 연산자
+        var txt1 = "방탄소년단 ";
+        var txt2 = "김태형 ";
+        var txt3 = txt1 + txt2;
+        console.log(txt3);
+
+        txt1 += txt2;
+        console.log(txt1);// txt1의 값이 방탄소년단 -> 방탄소년단 김태형
+        console.log(txt2);// txt2의 값은 김태형으로 유지됨
+
+        // 숫자와 문자
+        var x = "5" + 5;
+        console.log(x); // 출력값 : 55(문자열)
+
+        // 비교 연산자
+        console.log(1==1);// 1이 1과 같느냐
+        console.log(1=="1"); // true --> 실제로 ""안에 있는 값을 비교함
+        console.log(1==="1");// false --> ===이것은 값 and type 을 둘 다 비교함
+
+        console.log(1!=3);  // true
+        console.log(1!="1"); // false
+        console.log(1!=="1"); // true
+
+        console.log(3>2); // true
+        console.log(3<2); // false
+        console.log(3>=2);// true
+        console.log(3<=2);// false
+
+        // 논리 연산자 : & | !
+        console.log(3>2 && 1>2); // 결과값 : false
+        console.log(3>2 && 1>2); // 결과값 : false
+        console.log(3>2 && 1>2); // 결과값 : false
+        console.log(!(3>2));// false
+        console.log(!(3<2));// true
+
+
+
+    </script>
+
+
+</body>
+</html>
