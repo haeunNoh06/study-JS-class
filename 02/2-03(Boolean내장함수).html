@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Boolean 내장함수</title>
+</head>
+<body>
+    <script>
+        var x1 = true;
+        var y1 = new Boolean("true");
+        console.log(x1);
+        console.log(y1);
+
+        console.log(typeof(x1));    // 결과값 : boolean
+        console.log(typeof y1);     // 결과값 : object
+        
+        console.log(x1==y1);    // 결과값 : true, 타입 상관없이 값이 같으면 true
+        console.log(x1===y1);    // 결과값 : false, 값과 타입을 둘 다 비교
+        
+        var x2 = "abc";
+        var y2 = new String("abc");
+        console.log(typeof(x2));    // 결과값 : string
+        console.log(typeof y2);     // 결과값 : object
+        
+        console.log(x2==y2);    // 결과값 : true, 타입 상관없이 값이 같으면 true
+        console.log(x2===y2);    // 결과값 : false, 값과 타입을 둘 다 비교
+
+        console.log(Boolean(10>9));     // 결과값 : true(object타입)
+        console.log(10>9);              // 결과값 : true(boolean타입)
+
+        var x = 0;
+        console.log(x);             // 결과값 : 0
+        console.log(Boolean(x));    // 결과값 : false
+
+        var x10;
+        console.log(x10); // 결과값 : undefined
+        console.log(Boolean(x10)); // 결과값 : false, js는 1이 아니면 다 false로 여김
+
+    </script>
+</body>
+</html>
