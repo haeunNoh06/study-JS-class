@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Number 내장객체</title>
+</head>
+<body>
+    <script>
+        // toString()
+        var x1 = 123;
+        console.log(x1);
+        console.log(x1+1);
+        console.log(x1.toString()+1);
+
+        
+        // toFixed() : 지정된 소수점 자릿수까지 반올림으로 표시
+        var x2 = 123999.562243;
+        console.log(x2.toFixed(2)); // 출력값 : 123999.56
+
+
+        // toPrecision() : 정수까지 포함된 자릿수까지 반올림으로 표시
+        var x3 = 9.565;
+        console.log(x3.toPrecision(2)); // 출력값 : 9.6
+
+
+        // Number() : 문자열을 숫자로 변환
+        var x4 = Number("10");
+        console.log(x4+1);  // 출력값 : 11
+
+        var x5 = Number(true);
+        console.log(x5);
+
+        console.log(Number("     10      "));   // 출력값 : 10, 공백 제거 후 숫자로 변환
+        console.log(Number("     10"));   // 출력값 : 10, 공백 제거 후 숫자로 변환
+        console.log(Number("10.43"));   
+        console.log(Number("10,43"));   // NaN : Not a Number
+        console.log(Number("Choi"));    // NaN : Not a Number
+        console.log(Number("10 33"));   // NaN : Not a Number
+
+
+        // parseInt()
+        console.log(parseInt("3"));     // 출력값 : 3
+        console.log(parseInt("3.9"));   // 출력값 : 3, 정수로 만들어지므로 소수점은 버려짐
+        console.log(parseInt("10 12")); // 출력값 : 10
+        console.log(parseInt("10 years old")); // 출력값 : 10
+
+
+        // parseFloat()
+        console.log(parseFloat("10")); // 출력값 : 10
+        console.log(parseFloat("13.9")); // 출력값 : 13.9
+        console.log(parseFloat("13.9 aa")); // 출력값 : 13.9
+
+
+    </script>
+</body>
+</html>
