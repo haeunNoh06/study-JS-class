@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>
+</title>
+</head>
+<body>
+<script>
+    console.log(window);
+    //window.alert("이것은 대화창");
+    //alert("이것은 대화창입니다");   //window 생략가능
+    // var yn=confirm("정말로 삭제할거야?");
+    // console.log(yn);
+    // if(confirm("정말로 삭제할거야?")){
+    //     //삭제 로직 실행
+    //     console.log("삭제실행");
+    // }
+    
+    // var passwd = prompt("너의 마음속으로 들어갈 수 있는 비밀번호를 알려줘");
+    // console.log(passwd);
+    // if ( passwd === null ) {
+    //     console.log("취소 선택");
+    // } else if ( passwd === "") {
+    //     console.log("확인 선택");
+    // } else if ( passwd != "") {
+    //     console.log(passwd);
+    // }
+
+    // window.open("https://naver.com");
+    // window.print(); // 출력
+
+    // setTimeout
+    // 정해진 시간만큼 딜레이된 후 실행됨
+    // setTimeout(function() {
+    //     alert("기묭지 바보");
+    // }, 3000);   // 3000 : 3초
+
+    // setInterval : 특정한 시간마다 계속 반복 실행
+    // var i = 0;
+    // setInterval(function() {
+    //     console.log("1초마다 프로그램 호출" + i);
+    //     i++;
+    // }, 1000);
+
+    // clearInterval() : Interval 종료
+    var i = 0;
+    var fnc = setInterval(function() {
+        console.log("1초마다 프로그램 호출" + i);
+        if ( i === 5) {
+            clearInterval(fnc);// 종료
+        }
+        i++;
+    }, 1000);
+
+</script>
+</body>
+</html>
