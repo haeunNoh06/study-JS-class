@@ -6,14 +6,13 @@
     <script>
 
         function solution(arr) {
-            let answer = [];
-            let odd = [];
+            let answer = [],odd = [];
             let sum = 0;
 
-            for ( var i = 0; i < arr.length; i++) {
-                if ( arr[i] % 2 != 0 ) {
-                    sum += arr[i];
-                    odd.push(arr[i]);
+            for ( let x of arr ) {
+                if ( x % 2 === 1 ) {
+                    sum += x;
+                    odd.push(x);
                 }
             }
 
