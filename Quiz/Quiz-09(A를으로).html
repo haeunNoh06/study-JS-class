@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer = "";
+
+            // 방법1 : for문 이용
+            // for ( let x of s ) {
+            //     if ( x === "A") {
+            //         answer += "#";
+            //     } else {
+            //         answer += x;
+            //     }
+            // }
+
+            // 방법2 : replace()와 정규표현식 사용
+            // answer = s.replaceAll("A","#");
+            answer = s.replace(/A/ig,"#");   // i : ignore(대소문자구별하지않음), g : global(모든 것을)
+
+            return answer;
+        }
+        let str = "BANANA";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
