@@ -7,9 +7,10 @@
         // let name1 = "홍길동";
         let name1 = "홍길순";
         let str1 = "나의 이름은 '홍길동' 입니다.";
+        str1 = "나의 이름은 \"홍길동\"입니다.";
         console.log(str1);
 
-        let str2 = "나의 이름은 \"홍길동\" 입니다";
+        let str2 = "나의 이름은 \"'홍길동\"'' 입니다";
         console.log(str2);
         
         let str3 = "나의 이름은 \'홍길동\' 입니다";
@@ -22,7 +23,7 @@
         let y1 = 3.14;
 
         // undefined
-        let u1;
+        let u1; 
         console.log(u1);  // 선언을 하지 않아도 undefined를 출력함
 
         // null
@@ -31,34 +32,57 @@
 
         // object : java에서 class
         // object 선언 후 멤버변수 초기화
-        let person1 = {};   // Student person1
-        person1.firstName = "길동"; // firstName은 매개변수임
-        person1.lastName = "홍";
-        person1.age = 20;
+        // let person1 = {};   // Student person1
+        // person1.firstName = "길동"; // firstName은 매개변수임
+        // person1.lastName = "홍";
+        // person1.age = 20;
         
-        // object 선언과 동시에 초기화
+        let person1 = {};
+        person1.firstName = "하은";
+        person1.lastName = "노";
+        person1.age = 18;
+
+        console.log(person1);
+
+        // // object 선언과 동시에 초기화
+        // let person2 = {
+        //     firstName : "길순",
+        //     lastName : "홍",
+        //     age : 18
+        // };
+
         let person2 = {
             firstName : "길순",
-            lastName : "홍",
+            lastName : "노",
             age : 18
-        };
+        }
+
+        console.log(person2);
+
+        // let person3 = {};
+        // person3["firstName"] = "철수";
+        // person3["lastName"] = "김";
+        // person3["age"] = 18;
 
         let person3 = {};
         person3["firstName"] = "철수";
         person3["lastName"] = "김";
         person3["age"] = 18;
-
-        console.log(person1.firstName);
-        console.log(person1.lastName);
-        console.log(person1.age);
         
-        person2.email = "hong@gmail.com";
+        console.log(person3.firstName);
+        console.log(person3.lastName);
+        console.log(person3.age);
+
+        person2.email = "mgl";
+
+        // person2.email = "hong@gmail.com";
         console.log(person2.firstName);
         console.log(person2.lastName);
         console.log(person2.age);
         console.log(person2.email);
 
         // 배열 : Array
+        // let car = ["현대","기아","테슬라","벤츠"];
         let car = ["현대","기아","테슬라","벤츠"];
         console.log(car[0]);
         console.log(car[1]);
@@ -85,9 +109,13 @@
 
         let arr3 = [];
         console.log(arr3);
+        // arr3[0] = 1;
+        // arr3[1] = "대한민국";
+        // arr3[2] = "짝짝짝짝짝";
         arr3[0] = 1;
-        arr3[1] = "대한민국";
-        arr3[2] = "짝짝짝짝짝";
+        arr3[1] = "뭐하셍";
+        arr3[2] = "공부하셍";
+        arr3.push("뭐행");
 
         console.log(arr3);
 

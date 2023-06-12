@@ -32,11 +32,17 @@
         console.log(isAdult);
 
         // switch : 정수, break, default
+        // var d = new Date();
+        // var day = d.getDay(); // 일요일 : 0, 월요일 : 1
+        // console.log(day);
+
         var d = new Date();
-        var day = d.getDay(); // 일요일 : 0, 월요일 : 1
+        var day = d.getDate();
+        console.log(d);
+        day = d.getDay();
         console.log(day);
 
-        var dayName = "";
+        var dayName;
         switch (day) { // day : 정수
             case 0:
                 dayName = "일요일";

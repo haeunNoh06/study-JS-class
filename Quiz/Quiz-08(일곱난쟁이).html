@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function solution(arr) {
+            let answer, sum = 0;
+
+            // 방법 2
+            sum = arr.reduce(function(a,b) {
+                return a + b;
+            });
+
+            // 방법 3 : arrow function을 이용하는 법
+            sum = arr.reduce((a,b) => a + b );
+
+            for ( var i = 0; i < arr.length; i++) {
+                for ( var j = 1; j < arr.length; j++) {
+                    if ( sum - (arr[i-1]+arr[i]) === 100 ) {
+                        arr.splice(i-1, 0);
+                        arr.splice(i, 0);
+                        return arr;
+                    }
+                }
+            }
+
+            return answer;
+        }
+
+        let arr = [20,7,23,19,10,15,25,8,13];
+
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
