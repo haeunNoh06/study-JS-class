@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Default Function Parameter</title>
+</head>
+<body>
+    <script>
+        function say1(message) {
+            console.log(message);
+        }
+        say1("안녕");
+        say1();// undefined
+
+        // 예전방식
+        function say2(message) {
+            if ( message != undefined) {
+                console.log(message);
+            } else {
+                console.log("매개변수가 없습니다.");
+            }
+        }
+        say2("안녕하세요?");
+        say2();
+
+        //
+        function plus1(a,b) {
+            console.log(a+b);
+        }
+        plus1(1,3);
+        plus1(1);   // NaN : not a Number
+
+        // default function parameter
+        function plus2(a=0,b=0) {
+            console.log(a+b);
+        }
+        plus2(1,2);
+        plus2(1);   // 1
+        plus2();    // 0
+
+        // if ( defined != message ) 할 필요가 없어짐
+        function say3(message="매개변수가 없습니다.") {
+            console.log(message);
+        }
+        say3("안녕");
+        say3();
+    </script>
+</body>
+</html>
