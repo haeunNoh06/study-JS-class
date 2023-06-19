@@ -8,7 +8,7 @@
         console.log(txt.length);
 
         // IndexOf : 첫 번째 만나는 단어의 위치값
-        var str = "Please locate where 'locate'";
+        var str = "ton 'locate' locate";
         console.log(str.indexOf("locate"));
         // 없는 값이라면 -1 return
         console.log(str.indexOf("choi"));
@@ -25,13 +25,13 @@
 
 
         // slice(인덱스, 인덱스-1) : 인덱스~인덱스-1까지 글자를 잘라서 보여줌
-        var str = "Apple, Banana, Kiwi";
-        console.log(str.slice(7, 13)); // 출력값 : Banana
+        var str = "안녕하세요";
+        console.log(str.slice(2, 5)); // 출력값 : Banana
         // 인덱스가 하나인 경우 : 인덱스~끝까지 글자를 잘라서 보여줌
-        console.log(str.slice(7));
+        console.log(str.slice(3));
         // 인덱스가 -이면 -12~-6-1까지 글자를 잘라서 보여줌
         // -1, -2, -3, -4 이런 순서
-        console.log(str.slice(-12,-6));// 출력값 : Banana
+        console.log(str.slice(-5,-1));// 출력값 : Banana
 
 
         // substring
@@ -47,7 +47,7 @@
         console.log(jumin1.substr(4,2));// 일
 
         var jumin2 = "2007-08-28";
-        console.log(jumin2.substring(0,jumin2.indexOf("-")));
+        console.log(jumin2.slice(0,jumin2.indexOf("-")));
 
 
         // replace : 교체

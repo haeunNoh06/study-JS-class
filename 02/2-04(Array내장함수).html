@@ -31,7 +31,7 @@
         // pop() : 배열의 가장 마지막 항목을 제거하여 리턴
         var fruits2 = ["orange","Banana","Apple"];
         var arr2 = fruits2.pop();
-        console.log(arr2);
+        console.log("헤이",arr2);
         console.log(fruits2);
         fruits2.push("Kiwi");
         console.log(fruits2);
@@ -58,12 +58,12 @@
         // console.log(fruits5);   // 결과값 : Banana, Apple
         // fruits5.splice(1,2);
         // console.log(fruits5);   // 결과값 : Lemon', 'Banana', 'Orange', 'Apple
-        fruits5.splice(1,0);
-        console.log(fruits5);   // 결과값 : Banana
-        fruits5.splice(1,0,"Lemon");
+        // fruits5.splice(2);
+        console.log("이야",fruits5);   // 결과값 : Banana
+        fruits5.splice(0,1,"Lemon");
         console.log(fruits5);   // 결과값 : Banana, Lemon
-        fruits5.splice(1,0,"Lemon", "Kiwi");
-        console.log(fruits5);   // 결과값 : Banana, Lemon, Kiwi, Lemon
+        // fruits5.splice(1,1,"ㅣemon", "Kiwi");
+        // console.log(fruits5);   // 결과값 : Banana, Lemon, Kiwi, Lemon
         
 
         // concat() : 두 개의 배열을 하나로 만들어줌.
@@ -175,7 +175,7 @@
         var total = arr4.reduce(function(a,c){
             return a + c;
         });
-        console.log(total);
+        console.log("reduce",total);
 
 
         // map - filter()와는 다른 형태로 새로운 배열을 생성
