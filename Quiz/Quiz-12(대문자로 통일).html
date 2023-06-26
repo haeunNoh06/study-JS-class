@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>대문자와 소문자가 같이 존재하는 문자열을 입력 받아 대문자로 모두 통일하여 문자열을 출력하는 프로그램을 작성하시오.</title>
+</head>
+<body>
+    <script>
+
+        function solution(str) {
+            let answer="";
+            // answer = str.toUpperCase();
+            // for ( let x of str ) {
+            //     if ( x === x.toLowerCase() )
+            //         answer += x.toUpperCase();
+            //     else
+            //         answer += x;
+            // }
+
+            // 방법2 : 아스키코드 이용
+            // for ( let x of str ) {
+            //     if ( x.charCodeAt() >= 97 && x.charCodeAt() <= 122 ) {
+            //         answer += x.toUpperCase();
+            //     } else {
+            //         answer += x;
+            //     }
+            // }
+
+            // 대문자는 소문자로 소문자는 대문자로
+            for ( let x of str ) {
+                let num = x.charCodeAt();
+                if ( num >= 65 && x.charCodeAt() <= 90 )
+                    answer += toString(num+32);
+                    else if ( x.charCodeAt() >= 97 && x.charCodeAt() <= 122 )
+                    answer += toString(num-32);
+                else 
+                    answer += x;
+            }
+
+            return answer;
+        }
+
+        let str = "It is Study Time";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
