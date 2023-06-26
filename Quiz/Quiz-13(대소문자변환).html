@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function solution(str) {
+            let answer="";
+
+            // 대문자는 소문자로 소문자는 대문자로
+            for ( let x of str ) {
+                let num = x.charCodeAt();
+                if ( num >= 65 && num <= 90 )
+                    answer += String.fromCharCode(num+32);
+                else if ( num >= 97 && num <= 122 )
+                    answer += String.fromCharCode(num-32);
+                else 
+                answer += x;
+            }
+
+            return answer;
+        }
+
+        let str = "It is Study Time";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
