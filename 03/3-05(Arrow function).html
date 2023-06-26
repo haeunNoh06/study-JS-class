@@ -1,49 +1,55 @@
 <html>
 <head>
-    <title>Arrow function</title>
+    <title>Arrow Function</title>
 </head>
 <body>
     <script>
-        function hello1(){
-            console.log("hello world1");
-        }
+        // 함수로 선언 : 어디서든 선언 후 실행 가능
         hello1();
-
-        function hello2(){
-            console.log("hello world");
+        function hello1() {
+            console.log("Hello World1");
         }
 
+
+        // 변수로 선언 : 함수 선언 이후에 실행 가능
+        var hello2 = function hello2() {
+            console.log("Hello World2");
+        };
         hello2();
-        var hello2=function(){
-            console.log("hello world2");
-        }
         
-        //arrow function
-        var hello3=()=>{
-            console.log("hello world");
-            return "hello world3";
+
+        // arrow function
+        var hello3 = () => {
+            console.log("Hello World3");
         }
-        var str=hello3();
-        console.log(str);
+        hello3();
 
-        var hello4=()=>"hello world4";
-        var str=hello4();
-        console.log(str);
+        var hello4 = () => "Hello World4";
+        // 위와 hello4와 동일
+        // var hello4 = () => {
+        //     return "Hello World3";
+        // }
+        console.log(hello4());
 
-
-        //arrow function
-        //함수 호출시 매개변수를 전달하는 경우
-        var hello5=(fullName)=>"hello5"+" "+fullName;
-        
+        var hello5 = function(fullName) {
+            return "Hello5"+ " "+fullName;
+        }
         console.log(hello5("홍길동"));
 
-        //매개변수가 하나일 경우에는 () 생략 가능
-        var hello5=(fullName)=>"hello5"+" "+fullName;
-        console.log(hello5("홍길동"));
+        // arrow function
+        // 함수 호출시 매개변수를 전달하는 경우
+        var hello6 = (fullName) => {
+            return "Hello6"+ " "+fullName;
+        }
 
-        var hello6=(fullName,lastName)=>"hello6"+" "+fullName+" "+lastName;
+        // 매개변수가 하나일 경우에는 ()생략 가능
+        // var hello6 = fullName => {
+        //     return "Hello6"+ " "+fullName;
+        // }
+        // console.log(hello6("홍길동"));
+        
+        var hello6 = (fullName, lastName) => "Hello6"+" "+fullName+" "+lastName;
         console.log(hello6("길동","홍"));
-
-</script>
+    </script>
 </body>
-</html> 
+</html>
