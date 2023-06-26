@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Spread operator</title>
+</head>
+<body>
+    <script>
+        var arr1 = [4,5,6];
+        var arr2 = [1,2,3];
+        var arr3 = arr2.concat(arr1);
+        console.log(arr3);
+
+
+        // Spread operator : 배열 분해 기능
+        var arr4 = [4,5,6];
+        var arr5 = [1,2,3, ...arr4];
+        // var arr5 = [1,2,3, arr4[0], arr4[1], arr4[2]]; 위와 같다
+        console.log(arr5);
+        
+        var arr6 = [1,2, ...arr4, 3]; // 배열의 중간에도 사용 가능
+        console.log(arr6);
+
+        var arr7 = [4,5,6];
+        var arr8 = [1,2,3];
+        var arr9 = [...arr8, ...arr7];
+        console.log(arr9);
+
+        var cd = "CDEFG";
+        var alphabet = ["A", "B"];
+        console.log(alphabet);
+        
+        var alphabet = ["A", "B", ...cd]; // 스트링도 인덱스값을 가지고 있음. 때문에 ...cd로 배열에 각 인덱스를 넣을 수 있는 것
+        console.log(alphabet);
+
+                
+
+    </script>
+</body>
+</html>
