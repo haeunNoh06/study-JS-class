@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>
+        소문자로 된 단어(문자열)가 입력되면 그 단어의 가운데 문자를 출력하는 프로그램을 작성하시오.
+        단, 단어의 길이가 짝수일 경우에는 가운데 2개의 문자를 출력합니다.
+    </title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer;
+            if ( str.length % 2 == 0 ) {
+                answer = str.substr(str.length/2-1, 2);
+            } else {
+                answer = str.substr(str.length/2, 1);
+            }
+            return answer;
+        }
+
+        console.log(solution("study"));
+        console.log(solution("length"));
+    </script>
+</body>
+</html>
