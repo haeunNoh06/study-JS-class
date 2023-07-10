@@ -31,11 +31,18 @@
         console.log(str.slice(3));
         // 인덱스가 -이면 -12~-6-1까지 글자를 잘라서 보여줌
         // -1, -2, -3, -4 이런 순서
-        console.log(str.slice(-5,-1));// 출력값 : Banana
+        console.log(str.slice(-5,0));// 출력값 : Banana
 
+         //slice-문자열 자르기
+        var str="apple, banana, kiwi";
+        console.log(str.slice(7,13));   //인덱스,인덱스-1 or 글자수    //출력값 : banana
+        console.log(str.slice(7));  //banana,kiwi
+        console.log(str.slice(-12,-6));  //banana
+        console.log(str.slice(-2)); 
 
         // substring
         var str = "Apple, Banana, Kiwi";
+        
         console.log(str.substring(7,13)); // 출력값 : Banana
         
         // substr(n,m) : n번 글자부터 m글자
@@ -72,6 +79,7 @@
         // toUpperCase : 모두 대문자로
         var str9 = "HERE Here heRe";
         console.log(str9.toUpperCase());
+        console.log(str9);
 
         // toLowerCase : 모두 소문자로
         var str10 = "Here heRe Here";
@@ -86,6 +94,7 @@
 
         // concat : 문자열 연결
         console.log(txt1.concat(txt2));
+        console.log(txt1);
         console.log(txt1.concat(" ","Choi"," ",txt2));
 
 
@@ -98,7 +107,7 @@
         // padStart(n,m) : n자리로 하되 빈 자리는 m으로 채워라
         var str11 = "15";
         console.log(str11.padStart(8,0));
-        console.log("C-",str11.padStart(8,0));
+        console.log("C-"+str11.padStart(8,0));
         
         // 특정 자릿수를 통일하기 위해서 사용 : 예) 날짜를 두자릿수로 통일
         var str12 = "3";

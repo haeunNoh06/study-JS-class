@@ -17,7 +17,7 @@
 
 
         // toPrecision() : 정수까지 포함된 자릿수까지 반올림으로 표시
-        var x3 = 11119.565;
+        var x3 = 11119.365;
         console.log(x3.toPrecision(6)); // 출력값 : 9.6
 
 
@@ -40,13 +40,13 @@
         console.log(parseInt("3"));     // 출력값 : 3
         console.log(parseInt("3.9"));   // 출력값 : 3, 정수로 만들어지므로 소수점은 버려짐
         console.log(parseInt("10 12")); // 출력값 : 10
-        console.log(parseInt("10 years old")); // 출력값 : 10
+        console.log(parseInt("years 10 old")); // 출력값 : 10
 
 
         // parseFloat()
         console.log(parseFloat("10")); // 출력값 : 10
         console.log(parseFloat("13.9")); // 출력값 : 13.9
-        console.log(parseFloat("13.9 aa")); // 출력값 : 13.9
+        console.log(parseFloat("aa 13.9")); // 출력값 : 13.9
 
 
     </script>
